@@ -7,17 +7,17 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'BotBrainFeed'
-  s.version          = '1.2.8'
-  s.summary          = '布本智能图文SDK'
+  s.name             = 'botbrain_feed_sdk_ios'
+  s.version          = '1.2.9'
+  s.summary          = '布本智能图文SDK标准版'
 
-  s.homepage         = 'https://github.com/BotBrain/BotBrainFeed'
+  s.homepage         = 'https://github.com/BotBrain/botbrain_feed_sdk_ios'
   s.license = {
     :type => "Copyright",
     :text => "      Copyright (c) 2016 BotBrain. All rights reserved.\n"
   }
   s.author           = { 'BotBrain' => 'zhangzhan@firedata.cc' }
-  s.source           = { :git => 'https://github.com/BotBrain/BotBrainFeed.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/BotBrain/botbrain_feed_sdk_ios.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
 

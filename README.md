@@ -1,10 +1,14 @@
-# BotBrainFeed
+# botbrain_feed_sdk_ios
 
 [![Version](https://img.shields.io/cocoapods/v/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
 [![License](https://img.shields.io/cocoapods/l/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
 [![Platform](https://img.shields.io/cocoapods/p/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
 
 ## 版本更新
+
+#### v1.2.9
+
+1. 统一SDK命名规范。
 
 #### v1.2.8
 1. 适配搜索页面；
@@ -53,14 +57,14 @@
 首先在 `Podfile` 文件中添加：
 
 ```
-pod 'BotBrainFeed', '~>1.2.8'
+pod 'botbrain_feed_sdk_ios', '~>1.2.9'
 ```
 
 然后在终端 `cd` 到 `Podfile` 文件所在路径，执行 `pod install` 。
 
 ##### 1.2.2、手动集成
 
-请先 [下载SDK](https://github.com/BotBrain/BotBrainFeed) ，SDK包含 `BotBrainFeed` 下所有文件。
+请先 [下载SDK](https://github.com/BotBrain/botbrain_feed_sdk_ios) ，SDK包含 `BotBrainFeed` 下所有文件。
 把SDK直接拖入进工程目录结构中，然后在选项 `TARGETS--> Build Phases-->Link Binary With Libraries` 中添加系统依赖库 `libz.tbd` 、`WebKit.framework`。
 
 然后在选项 `TARGETS--> Build Settings-->Linking-->Other Linker Flags` 添加 `-ObjC` 。
