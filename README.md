@@ -1,8 +1,8 @@
 # botbrain_feed_sdk_ios
 
-[![Version](https://img.shields.io/cocoapods/v/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
-[![License](https://img.shields.io/cocoapods/l/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
-[![Platform](https://img.shields.io/cocoapods/p/BotBrainFeed.svg?style=flat)](http://cocoapods.org/pods/BotBrainFeed)
+[![Version](https://img.shields.io/cocoapods/v/botbrain_feed_sdk_ios.svg?style=flat)](http://cocoapods.org/pods/botbrain_feed_sdk_ios)
+[![License](https://img.shields.io/cocoapods/l/botbrain_feed_sdk_ios.svg?style=flat)](http://cocoapods.org/pods/botbrain_feed_sdk_ios)
+[![Platform](https://img.shields.io/cocoapods/p/botbrain_feed_sdk_ios.svg?style=flat)](http://cocoapods.org/pods/botbrain_feed_sdk_ios)
 
 ## 版本更新
 
