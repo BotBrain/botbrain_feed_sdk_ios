@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIView.h>
+#import "BotBrainFeedRefreshProtocol.h"
 
 @class BotBrainFeedColumnModel;
 @class BotBrainFeedShareModel;
@@ -29,8 +30,16 @@
  */
 - (void)botBrainDidTapBottomShareWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
+
 /**
- 点赞 - 点赞时
+ 点赞 — 点击点赞按钮时
+
+ @param shareModel 当前model
+ */
+- (void)botbrainWillLikeWithShareModel:(BotBrainFeedShareModel *)shareModel;
+
+/**
+ 点赞 - 点赞成功或者失败
  
  @param shareModel 当前Model
  */
@@ -50,6 +59,12 @@
  */
 - (void)botBrainDidCommentWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
+/**
+ 点击Feed流阅读文章
+
+ @param shareModel 当前点击的Model
+ */
+- (void)botBrainDidSelectedFeedItemWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 /**
  自定义返回详情right item显示内容，只接受NSString类型或者UIImage类型，返回nil则不显示
@@ -84,10 +99,37 @@
 
 @end
 
+/// 自定义的Cell相关DataModel需要服从此协议
+@protocol BotFeedPlaceholderCellModelDelegate <NSObject>
+
+// 自定义Cell的下标
+@property (nonatomic, assign) NSInteger index;
+// 占位Cell要插入的位置，下标从0开始。注意：每次更新的数据条数为6，所以每次插入的位置范围要保证在 0 —— 6
+@property (nonatomic, assign) NSInteger insertIndex;
+
+@property (nonatomic, assign) CGFloat cellHeight;
+
+@end
+
 
 @protocol BotBrainFeedDelegate <NSObject>
 
 @optional
+
+/**
+ Feed 流自定义刷新 Header
+
+ @return 自定义 Header
+ */
+- (UIView<BotBrainFeedRefreshProtocol> *)botRefreshHeaderForFeed;
+
+/**
+ Feed 流自定义加载更多 Footer
+
+ @return 自定义 Footer
+ */
+- (UIView<BotBrainFeedRefreshProtocol> *)botRefreshFooterForFeed;
+
 /**
  控制左右滑动
  
@@ -134,4 +176,13 @@
  */
 - (NSArray<BotBrainFeedColumnModel *> *)filterFeedListColumnWithOriginArray:(NSArray <BotBrainFeedColumnModel *>*)array;
 
+#pragma mark - placeholder cell
+/// 此方法会在刷新或者加载更多成功的时候回调，columnID 为栏目的下标
+- (id<BotFeedPlaceholderCellModelDelegate>)cellModelForPlaceholderCellWithColumnID:(NSInteger)columnID;
+/// 自定义的Cell，自主实现UI渲染，index为 CellModel的index，不是整个Feed流的 index
+- (UITableViewCell *)placeholderCellForTableView:(UITableView *)tableView atIndex:(NSInteger)index;
+/// 选中自定义Cell时的回调
+- (void)didSelectedPlaceholderCellWithCellModel:(id<BotFeedPlaceholderCellModelDelegate>)cellMoel;
+
 @end
+

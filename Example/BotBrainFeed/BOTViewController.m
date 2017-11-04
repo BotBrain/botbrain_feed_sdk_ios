@@ -22,6 +22,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    // 修改栏目标签UI
+    BotBrainFeedTabConfig *tabConfig = [[BotBrainFeedTabConfig alloc] init];
+    //    tabConfig.tabViewHeight = 50;
+    //    tabConfig.tabItemSpace = 30;
+    tabConfig.tabIndicatorHeight = 2;
+    tabConfig.tabIndicatorColor = [UIColor redColor];
+    tabConfig.tabBackgroundColor = [UIColor colorWithWhite:0.90 alpha:1.];
+    tabConfig.tabTextNormalAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15], NSForegroundColorAttributeName: [UIColor blackColor]};
+    tabConfig.tabTextSelectedAttributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:17], NSForegroundColorAttributeName: [UIColor redColor]};
+    BOTBrainDefaultManager.configure.feedTabConfig = tabConfig;
     
     [BOTBrainDefaultManager addFeedDelegate:self];
     [BOTBrainDefaultManager addFeedDetailDelegate:self];

@@ -12,6 +12,7 @@
 
 /// 分享回调模型
 @interface BotBrainFeedShareModel : NSObject
+
 /** 文章标题 */
 @property (nonatomic, copy) NSString *feedItemTitle;
 /** 文章摘要，可能为空 */
@@ -55,9 +56,14 @@ typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
 };
 
 #define BOTBrainDefaultManager [BotBrainManager defaultManager]
+// 总配置
 #define BOTBrainDefaultManagerConfig [BotBrainManager defaultManager].configure
+// Feed流
 #define BOTBrainDefaultManagerListConfig [BotBrainManager defaultManager].configure.feedListConfig
+// 详情
 #define BOTBrainDefaultManagerDetailConfig [BotBrainManager defaultManager].configure.feedDetailConfig
+// 栏目标签
+#define BOTBrainDefaultManagerFeedTabConfig [BotBrainManager defaultManager].configure.feedTabConfig
 
 /// Feed流管理类
 @interface BotBrainManager : NSObject
@@ -203,7 +209,7 @@ typedef NS_ENUM(NSUInteger, BOTFeedThemeType) {
 
 /**
  切换日间模式和夜间模式
-
+ 如果没有夜间模式，有多套主题，设置【dayThemeDictionary】后调用此方法更新UI，type 选择 BOTFeedThemeType_Normal 。
  @param type BOTFeedThemeType
  */
 + (void)changeFeedThemeForType:(BOTFeedThemeType)type;

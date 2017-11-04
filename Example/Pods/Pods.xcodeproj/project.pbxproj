@@ -116,14 +116,14 @@
 		03F887F6A9A864F97602EA68DC76821A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		041B0C1B00C1AF4DD99F41C5546AC600 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
 		0A20E0C4ED0525A454451AACE6807FF7 /* Pods-BotBrainFeed_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BotBrainFeed_Example.modulemap"; sourceTree = "<group>"; };
-		0EDC8F15DCCB1ABCD7BCA437A2B03835 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTMobInterstitial.h; path = BotBrainFeed/Classes/GDTLibrary/GDTMobInterstitial.h; sourceTree = "<group>"; };
-		1888710414C7888C26B8B4799275BF89 /* GDTNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTNativeAd.h; path = BotBrainFeed/Classes/GDTLibrary/GDTNativeAd.h; sourceTree = "<group>"; };
+		12DE384C1E173F3D89784043E071D77C /* GDTMobInterstitial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTMobInterstitial.h; path = BotBrainFeed/Classes/GDTLibrary/GDTMobInterstitial.h; sourceTree = "<group>"; };
 		19A28EB1AC61C13D651792E1D52282C2 /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
 		1BB0DEFD5B2039B59712BA1E71606526 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		1D3A91EB4F24E4682C460C8ECCCECC26 /* BotBrainSource.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = BotBrainSource.bundle; path = BotBrainFeed/Assets/BotBrainSource.bundle; sourceTree = "<group>"; };
 		1EC08837C39509BBA2768D9201788EDD /* Pods-BotBrainFeed_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BotBrainFeed_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1FDFADB53EF4FB903FFCBF58F1A361BE /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		20C85A11063EA38FD628258B16E00F37 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		262D840D7C1454DEDDAEBA03212002B9 /* libGDTMobSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGDTMobSDK.a; path = BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a; sourceTree = "<group>"; };
+		276F29E4FF26A504D66156C5EC46E10D /* libGDTMobSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGDTMobSDK.a; path = BotBrainFeed/Classes/GDTLibrary/libGDTMobSDK.a; sourceTree = "<group>"; };
 		2A17A009B95754F6ABDFBE4E460271BB /* Pods-BotBrainFeed_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BotBrainFeed_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		2CA06613D46229D2B5A697B2777F9554 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		2CA9EA6CDE75C8216517167AD58FFA14 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 		3404F04E9F8FF8AB3FC596807AAEB955 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
 		354382CC9DD19604DCDFB64866A6A370 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		35BBD9DA1E607C77114F3FD52D88AFFB /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		380B4FD57EC3C7FA67331DE963C6AF94 /* BotBrainPods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BotBrainPods.framework; path = BotBrainFeed/Classes/BotBrainPods.framework; sourceTree = "<group>"; };
 		3A05B969895904E3BE7479E2B06391B4 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		3AC600828BBA8D47626E8879E5AF0D94 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDecoder.h; path = SDWebImage/SDWebImageDecoder.h; sourceTree = "<group>"; };
 		3D06E084E1A3F21A9F05A561DCB67058 /* Pods-BotBrainFeed_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BotBrainFeed_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -143,20 +144,21 @@
 		409AAB429F732E4A4466173F771FB7CD /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
 		4482FE7783F431635BE023235308142B /* Pods-BotBrainFeed_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BotBrainFeed_Tests-resources.sh"; sourceTree = "<group>"; };
 		44F7BDCFA1BCBE8F2E1BCB8FBA33E1AB /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
-		488A87DAD71D6A2DE01906F7816223FA /* GDTMobBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTMobBannerView.h; path = BotBrainFeed/Classes/GDTLibrary/GDTMobBannerView.h; sourceTree = "<group>"; };
+		486A3CACAA94B025203DEBC67E7C33C9 /* GDTSplashAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTSplashAd.h; path = BotBrainFeed/Classes/GDTLibrary/GDTSplashAd.h; sourceTree = "<group>"; };
 		4DA024300D880912D2FAF748000DD5AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB0677EE3F7FE692C7F83924C6BD77A /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
-		501A40C87A479CCC930AB449A4409B92 /* BotBrainPods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BotBrainPods.framework; path = BotBrainFeed/Classes/BotBrainPods.framework; sourceTree = "<group>"; };
 		534B956C009092E692D8EE9F56C8D576 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		54EF7CEA35455D5CF018B6DA54FD4A85 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
 		576E31AA5700662FDACC7D92C69E308E /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		5A62AFC14F0E93A73BF3C8E327C6F14A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		5ABF064C3EA92987FCCD9F06F276B030 /* GDTTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTTrack.h; path = BotBrainFeed/Classes/GDTLibrary/GDTTrack.h; sourceTree = "<group>"; };
 		5D24AB2BF61095469F04432F38C7A654 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E1182C8B31A04C9FC70DADB6D60E356 /* Pods-BotBrainFeed_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BotBrainFeed_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		608CD3CF7FD56CC0643FD811CEBF1F8C /* SDWebImageDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDecoder.m; path = SDWebImage/SDWebImageDecoder.m; sourceTree = "<group>"; };
 		61932547E3B8F83AD87D593CF799F175 /* Pods-BotBrainFeed_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BotBrainFeed_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		629F278A05868DA6E742B417B8CC2800 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		640F7FCAA3C7E3A42FF0B1792F95228C /* Pods-BotBrainFeed_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BotBrainFeed_Example-dummy.m"; sourceTree = "<group>"; };
+		641CB2E4092C6FE7CC6A1EC77028481F /* GDTMobBannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTMobBannerView.h; path = BotBrainFeed/Classes/GDTLibrary/GDTMobBannerView.h; sourceTree = "<group>"; };
 		64E7D8208E7493AEAF83F45BD5F512E5 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		664C4A78EBEDC511290EA070693B22EE /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AFNetworking.modulemap; sourceTree = "<group>"; };
 		6940A5886A30518105475234DB6DF7E3 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		8232D78856BB02DA7F3303C864044A75 /* Pods-BotBrainFeed_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BotBrainFeed_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		85AD2182174E638D2CD94598DA928CEC /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		8806F210FAF651F90DA05F1087AB79FF /* Pods_BotBrainFeed_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BotBrainFeed_Example.framework; path = "Pods-BotBrainFeed_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C57E1FE49D567AE10E6B2781042FC0 /* GDTNativeAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTNativeAd.h; path = BotBrainFeed/Classes/GDTLibrary/GDTNativeAd.h; sourceTree = "<group>"; };
 		8B6BF3E1A90C6D7817458A94CFBF20E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		90C78F8CA18DF7387EBE0300B2BA40C1 /* Pods-BotBrainFeed_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BotBrainFeed_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -192,7 +195,6 @@
 		A894B38A02213842119D7A9DCE1DA2F3 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		AAC1CB059C282AE8D5D8441AEE6F9BAE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		AB5F9121916A77B2DDE48033AA7C2982 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		AF04D960F8E4D3A24CEB74A88881F5E2 /* BotBrainSource.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = BotBrainSource.bundle; path = BotBrainFeed/Assets/BotBrainSource.bundle; sourceTree = "<group>"; };
 		B015D49222FB303FBD8A83133A9E3D65 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
 		B09B0138E4CA91BC87BAE712D7AEF3E1 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		B11FC7C855FC9B8BA352BCDAE9AE04E2 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
@@ -207,8 +209,6 @@
 		BE9CEB72C71A3AB741E51464B071F65F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		BF58EF49D770459594BCDBDF174202FE /* Pods-BotBrainFeed_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BotBrainFeed_Example-frameworks.sh"; sourceTree = "<group>"; };
 		BFE1F1485E695CB3D93A70ECF18E98E6 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
-		C2FCF557534CB7559C95DB1D42EA7874 /* GDTSplashAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTSplashAd.h; path = BotBrainFeed/Classes/GDTLibrary/GDTSplashAd.h; sourceTree = "<group>"; };
-		C3CD24D39DC4E0C45FC6705A07E33210 /* GDTTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTTrack.h; path = BotBrainFeed/Classes/GDTLibrary/GDTTrack.h; sourceTree = "<group>"; };
 		C6E11B8782F81F4B3EBECCAD8C255A22 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		C80AD6E8268324AB743A35575E799773 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		C85B45362C2B55BF051DD68D616F7B7D /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
@@ -291,14 +291,6 @@
 			);
 			name = "Pods-BotBrainFeed_Tests";
 			path = "Target Support Files/Pods-BotBrainFeed_Tests";
-			sourceTree = "<group>";
-		};
-		05B48DA3E25A2B8E55D9A7A077637CDE /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ED86ECCB286B23F79C368D422762BAFF /* BotBrainFeed */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		099FB64AC5C26A1B8D435D9F9434A0A6 /* Security */ = {
@@ -397,14 +389,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		61A52FE59C3F34E0FE86D9B0BD04F854 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				262D840D7C1454DEDDAEBA03212002B9 /* libGDTMobSDK.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		64F678A521797915F15E50558DB2C536 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,11 +399,30 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		6DA99AC9976496EADBB62817237F9CC2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74A91F5D1C906E6BF57464F1566FE81F /* botbrain_feed_sdk_ios */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		74A91F5D1C906E6BF57464F1566FE81F /* botbrain_feed_sdk_ios */ = {
+			isa = PBXGroup;
+			children = (
+				D5CEA42E1D4E53FAC54342B08CFA48C6 /* Frameworks */,
+				D933C8589FE059DDA9CA14B7342FF67E /* GDTLibrary */,
+				96CDB6D082B74FC1C508135615D9651A /* Resources */,
+			);
+			name = botbrain_feed_sdk_ios;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				05B48DA3E25A2B8E55D9A7A077637CDE /* Development Pods */,
+				6DA99AC9976496EADBB62817237F9CC2 /* Development Pods */,
 				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
 				42D8607F4FE53226755E0E9A00DCACE2 /* Pods */,
 				AA57B409DC67E27193585484AA7D1428 /* Products */,
@@ -436,6 +439,14 @@
 			path = BotFireData;
 			sourceTree = "<group>";
 		};
+		96CDB6D082B74FC1C508135615D9651A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D3A91EB4F24E4682C460C8ECCCECC26 /* BotBrainSource.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A2E4D8FCFF4418E4D6F5BEDFDE3161BF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +459,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		A2F7F059DC21D09A34B03A710426FEA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				276F29E4FF26A504D66156C5EC46E10D /* libGDTMobSDK.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A7D0EA181E7C181997CA44F679AE5B33 /* NSURLSession */ = {
@@ -501,20 +520,33 @@
 			path = "../Target Support Files/SDWebImage";
 			sourceTree = "<group>";
 		};
-		C6EA36D7151FFF5A412BAB91132DB4A8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				501A40C87A479CCC930AB449A4409B92 /* BotBrainPods.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CD38AD7F03BB580F6C8FD9978B7FAE4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FF6D0BC316C378164B78508378AF6476 /* FireData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5CEA42E1D4E53FAC54342B08CFA48C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				380B4FD57EC3C7FA67331DE963C6AF94 /* BotBrainPods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D933C8589FE059DDA9CA14B7342FF67E /* GDTLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				641CB2E4092C6FE7CC6A1EC77028481F /* GDTMobBannerView.h */,
+				12DE384C1E173F3D89784043E071D77C /* GDTMobInterstitial.h */,
+				88C57E1FE49D567AE10E6B2781042FC0 /* GDTNativeAd.h */,
+				486A3CACAA94B025203DEBC67E7C33C9 /* GDTSplashAd.h */,
+				5ABF064C3EA92987FCCD9F06F276B030 /* GDTTrack.h */,
+				A2F7F059DC21D09A34B03A710426FEA0 /* Frameworks */,
+			);
+			name = GDTLibrary;
 			sourceTree = "<group>";
 		};
 		ED843EB9B1603851685D637F88E830C1 /* Pods-BotBrainFeed_Example */ = {
@@ -533,38 +565,6 @@
 			);
 			name = "Pods-BotBrainFeed_Example";
 			path = "Target Support Files/Pods-BotBrainFeed_Example";
-			sourceTree = "<group>";
-		};
-		ED86ECCB286B23F79C368D422762BAFF /* BotBrainFeed */ = {
-			isa = PBXGroup;
-			children = (
-				C6EA36D7151FFF5A412BAB91132DB4A8 /* Frameworks */,
-				F161DD9E1A62EA54D362B2BABD31DC54 /* GDTLibrary */,
-				EF4215C067FB727F9212027AA4B63EB4 /* Resources */,
-			);
-			name = BotBrainFeed;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		EF4215C067FB727F9212027AA4B63EB4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AF04D960F8E4D3A24CEB74A88881F5E2 /* BotBrainSource.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		F161DD9E1A62EA54D362B2BABD31DC54 /* GDTLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				488A87DAD71D6A2DE01906F7816223FA /* GDTMobBannerView.h */,
-				0EDC8F15DCCB1ABCD7BCA437A2B03835 /* GDTMobInterstitial.h */,
-				1888710414C7888C26B8B4799275BF89 /* GDTNativeAd.h */,
-				C2FCF557534CB7559C95DB1D42EA7874 /* GDTSplashAd.h */,
-				C3CD24D39DC4E0C45FC6705A07E33210 /* GDTTrack.h */,
-				61A52FE59C3F34E0FE86D9B0BD04F854 /* Frameworks */,
-			);
-			name = GDTLibrary;
 			sourceTree = "<group>";
 		};
 		FEC65036E099AF22EF95628FF6F4975A /* Core */ = {

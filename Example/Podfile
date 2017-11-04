@@ -3,7 +3,7 @@ platform :ios, '8.0'
 use_frameworks!
 inhibit_all_warnings!
 target 'BotBrainFeed_Example' do
-  pod 'BotBrainFeed', :path => '../'
+  pod 'botbrain_feed_sdk_ios', :path => '../'
 
   target 'BotBrainFeed_Tests' do
     inherit! :search_paths

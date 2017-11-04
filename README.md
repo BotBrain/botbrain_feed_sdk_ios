@@ -5,6 +5,13 @@
 [![Platform](https://img.shields.io/cocoapods/p/botbrain_feed_sdk_ios.svg?style=flat)](http://cocoapods.org/pods/botbrain_feed_sdk_ios)
 
 ## 版本更新
+#### v1.3.0
+
+1. 栏目标签栏可自定义；
+2. 更新提示 View 可自定义；
+3. 下拉刷新样式可自定义；
+4. 详情底部点赞和分享图标可自定义；
+5. 新增阅读文章行为回调；
 
 #### v1.2.9
 
@@ -12,8 +19,8 @@
 
 #### v1.2.8
 1. 适配搜索页面；
-2. 优化Feed流UI;
-3. 修复bug，优化SDK。
+2. 优化 Feed 流 UI;
+3. 修复 bug，优化 SDK。
 
 #### v1.2.6
 
@@ -113,8 +120,9 @@ pod 'botbrain_feed_sdk_ios', '~>1.2.9'
 ```
 [BotBrainManager setBotBrainLogEnable:YES];
 ```
-请先于初始化SDK调用此方法开启 `Debug` 模式
+请先于初始化SDK调用此方法开启 `Debug` 模式。
 
+建议通过第一种方式开启服务，可通过 `BotBrainConfig` 配置来实现更多的 UI 自定义。
 
 
 #### 2.2、展示图文列表
@@ -172,7 +180,14 @@ SDK会优先选择Push方式显示ViewController，无法Push的时候会模态�
 - (void)botBrainDidTapBottomShareWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 /**
- 点赞 - 点赞时
+ 点赞 — 点击点赞按钮时
+
+ @param shareModel 当前model
+ */
+- (void)botbrainWillLikeWithShareModel:(BotBrainFeedShareModel *)shareModel;
+
+/**
+ 点赞 - 点赞成功或者失败
  
  @param shareModel 当前Model
  */
@@ -191,6 +206,13 @@ SDK会优先选择Push方式显示ViewController，无法Push的时候会模态�
  @param shareModel 当前Model
  */
 - (void)botBrainDidCommentWithShareModel:(BotBrainFeedShareModel *)shareModel;
+
+/**
+ 点击Feed流阅读文章
+
+ @param shareModel 当前点击的Model
+ */
+- (void)botBrainDidSelectedFeedItemWithShareModel:(BotBrainFeedShareModel *)shareModel;
 
 ```
 
@@ -221,18 +243,78 @@ SDK会优先选择Push方式显示ViewController，无法Push的时候会模态�
 #### 3.1、针对图文列表的定制：
 图文列表相关的定制通过代理 `BotBrainFeedDelegate` 和 `BotBrainFeedListConfig` 来实现。
 
-##### 3.1.1、列表相关
+##### 3.1.1、部分UI修改方法
 
-可控制列表是否可以左右切换
+（1）可控制列表是否可以左右切换
 
 ```
 BOTBrainDefaultManagerListConfig.forbidHorizontalScroll = YES;
 ```
 
-可隐藏和显示栏目
+（2）可隐藏和显示栏目
 
 ```
 BOTBrainDefaultManagerListConfig.hideColumnView = YES;
+```
+
+（3）修改刷新成功后的顶部提示UI
+
+```
+// 背景色
+BOTBrainDefaultManagerListConfig.tipViewBackgroundColor = [UIColor whiteColor];
+// 提示文案样式
+BOTBrainDefaultManagerListConfig.tipTextAttributed = @{NSFontAttributeName: [UIFont systemFontOfSize:14], NSForegroundColorAttributeName: [UIColor blackColor]};
+```
+
+（4）Feed流顶部栏目标签UI修改，此处需要初始化一个 `BotBrainFeedTabConfig` 的实例，进行相关UI修改后，给 `feedTabConfig` 赋值。
+
+```
+BotBrainFeedTabConfig *tabConfig = [[BotBrainFeedTabConfig alloc] init];
+// 指示器高度，高度为0时隐藏
+tabConfig.tabIndicatorHeight = 2;
+// 指示器颜色
+tabConfig.tabIndicatorColor = [UIColor redColor];
+// 栏目标签背景色
+tabConfig.tabBackgroundColor = [UIColor colorWithWhite:0.90 alpha:1.];
+// 标签文字未选中样式
+tabConfig.tabTextNormalAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15], NSForegroundColorAttributeName: [UIColor blackColor]};
+// 标签文字选中样式
+tabConfig.tabTextSelectedAttributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:17], NSForegroundColorAttributeName: [UIColor redColor]};
+BOTBrainDefaultManager.configure.feedTabConfig = tabConfig;
+```
+
+（5）Feed流刷新样式修改，通过实现代理 `BotBrainFeedDelegate` 中的方法来返回一个服从 `BotBrainFeedRefreshProtocol` 协议的 `UIView` 的实例，代码如下：
+
+```
+- (UIView<BotBrainFeedRefreshProtocol> *)botRefreshHeaderForFeed {
+    BotUserCustomRefreshHeader *refreshHeader = [[BotUserCustomRefreshHeader alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 50)];
+    return refreshHeader;
+}
+```
+
+`BotBrainFeedRefreshProtocol` 中定义了以下方法，由服从此协议的 View 去实现。
+
+```
+@required
+// 返回自定义 Header 的高度
+- (CGFloat)botHeightForRefreshHeader;
+// 刷新状态，开发者可以在此方法中根据不同的状态设置不同样式
+- (void)botRefreshStateWithType:(BotFeedRefreshType)type;
+
+@optional
+// 下拉时的百分比
+- (void)botRefreshPullingPercent:(CGFloat)pullingPercent;
+```
+
+（6）详情底部点赞、分享图片修改
+
+```
+// 未点赞图片修改
+BOTBrainDefaultManagerDetailConfig.likeNormalImage = [UIImage imageNamed:@"UnLikeImage"];
+// 已点赞图片修改
+BOTBrainDefaultManagerDetailConfig.likeSelectedImage = [UIImage imageNamed:@"LikeImage"];
+// 底部分享按钮处图片修改
+BOTBrainDefaultManagerDetailConfig.bottomShareImage = [UIImage imageNamed:@"ShareImage"];
 ```
 
 注意：使用上述方法需使用 ` startWithConfigure: ` 方法初始化。
@@ -314,12 +396,30 @@ SDK支持从分享出去的文章详情跳转到App对应的详情页，请提�
 
 SDK依赖的 `AFNetworking` 和 `SDWebImage` 的版本号已经是比较低的版本，如果还是发生了 `AFNetworking` 和 `SDWebImage` 依赖的版本有冲突，你可以 `fork` 一份代码到你的GitHub中，修改 `BotBrainFeed.podspec` 中依赖库的版本号，然后为SDK指定 `podspec` 源为你的GitHub中的地址。记得同时修改 `BotBrainFeed.podspec` 中 `s.source`。
 
+5.4、无法搜索到 `botbrain_feed_sdk_ios`
+
+如果遇见无法搜索到库 `botbrain_feed_sdk_ios` 的时候，请依次进行一下操作：
+（1）更新 `CocoaPods` 本地 `repo`，在终端执行以下代码：
+
+```
+pod repo update
+```
+更新完成后再次尝试搜索。
+
+（2）如果第一种方法依然无法解决问题，请在终端尝试以下操作：
+
+```
+rm ~/Library/Caches/CocoaPods/search_index.json
+```
+执行操作后再次尝试搜索。
+注意：删除该文件后再次搜索会比较漫长，请耐心等待。
+
 ## Author
 
 BotBrain, zhangzhan@firedata.cc
 
 ## License
-Copyright (c) 2016 BotBrain. All rights reserved
+Copyright (c) 2017 BotBrain. All rights reserved
 
 
 
