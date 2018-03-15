@@ -64,7 +64,7 @@
 首先在 `Podfile` 文件中添加：
 
 ```
-pod 'botbrain_feed_sdk_ios', '~>1.2.9'
+pod 'botbrain_feed_sdk_ios', '~>1.3.2'
 ```
 
 然后在终端 `cd` 到 `Podfile` 文件所在路径，执行 `pod install` 。
@@ -72,7 +72,7 @@ pod 'botbrain_feed_sdk_ios', '~>1.2.9'
 ##### 1.2.2、手动集成
 
 请先 [下载SDK](https://github.com/BotBrain/botbrain_feed_sdk_ios) ，SDK包含 `BotBrainFeed` 下所有文件。
-把SDK直接拖入进工程目录结构中，然后在选项 `TARGETS--> Build Phases-->Link Binary With Libraries` 中添加系统依赖库 `libz.tbd` 、`WebKit.framework`。
+把SDK直接拖入进工程目录结构中，然后在选项 `TARGETS--> Build Phases-->Link Binary With Libraries` 中添加系统依赖库 `libz.tbd` 、`WebKit.framework`、`CoreMotion.framework`、`StoreKit.framework`。。
 
 然后在选项 `TARGETS--> Build Settings-->Linking-->Other Linker Flags` 添加 `-ObjC` 。
 
@@ -82,7 +82,7 @@ pod 'botbrain_feed_sdk_ios', '~>1.2.9'
 ### 2、基本功能集成
 #### 2.1、配置 `AppDelegate.m`
 
-导入头文件 `#import "BotBrainManager.h"`
+导入头文件 `#import <BotBrainPods/BotBrainManager.h>`
 
 在 `AppDelegate.m` 配置相关信息：
 
@@ -127,7 +127,7 @@ pod 'botbrain_feed_sdk_ios', '~>1.2.9'
 
 #### 2.2、展示图文列表
 
-在你要展示图文列表的 `UIViewController` 中导入头文件 `#import "BotBrainManager.h"`。
+在你要展示图文列表的 `UIViewController` 中导入头文件 `#import <BotBrainPods/BotBrainManager.h>`。
 
 在你想要展示图文列表的点击事件中调用如下代码：
 
