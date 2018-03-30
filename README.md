@@ -64,7 +64,7 @@
 首先在 `Podfile` 文件中添加：
 
 ```
-pod 'botbrain_feed_sdk_ios', '~>1.3.2'
+pod 'botbrain_feed_sdk_ios', '~>1.3.0'
 ```
 
 然后在终端 `cd` 到 `Podfile` 文件所在路径，执行 `pod install` 。
